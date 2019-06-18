@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class sentenceGenerator {
+public class SentenceGenerator {
     private List<String> firstWordList;
     private List<String> secondWordList;
     private List<String> thirdWordList;
     private List<String> lastPartString;
     private Random random;
 
-    public sentenceGenerator(){
+    public SentenceGenerator(){
         this.firstWordList= new ArrayList<String>();
         this.secondWordList=new ArrayList<String>();
         this.thirdWordList=new ArrayList<String>();
@@ -24,7 +24,7 @@ public class sentenceGenerator {
         this.secondWordList.add(secondWord);
     }
     public void addThirdWordList(String thirdWord){
-        this.secondWordList.add(thirdWord);
+        this.thirdWordList.add(thirdWord);
     }
     public void addLastPartOfStringList(String lastPartString){
         this.lastPartString.add(lastPartString);
@@ -41,6 +41,7 @@ public class sentenceGenerator {
         String lastPart= lastPartString.get(random.nextInt(lastPartString.size()));
 
         String generatedSentence=firstWord+" "+secondWord+" "+thirdWord+" "+lastPart+".";
+        System.out.println(generatedSentence);
 
     }
 }
